@@ -1,24 +1,20 @@
 //
-//  MyTableViewController.swift
+//  NewController.swift
 //  TableViewExample
 //
-//  Created by Wladislaw Kowalew on 24/10/2020.
+//  Created by Wladislaw Kowalew on 30/10/2020.
 //  Copyright © 2020 Wladislaw Kowalew. All rights reserved.
 //
 
 import UIKit
 
-class MyTableViewController: UITableViewController {
-
-    var mas1 = [String](arrayLiteral: "Red", "Orange", "Yellow", "Green", "Cyan", "Blue", "Violet")
-    var mas2 = [String] (arrayLiteral: "GTA", "GTA2", "GTA3", "GTA4", "GTA5")
-    var mas = [[String]]()
+class NewController: UITableViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        mas.append(mas1)
-        mas.append(mas2)
+        //self.navigationItem.title = "Name"
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,58 +26,23 @@ class MyTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return mas.count
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return mas[section].count
+        return 0
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell;
-        if (indexPath.section == 0) {
-            cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-        }else{
-            cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
-        }
-        cell.textLabel?.text = mas[indexPath.section][indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-    
-    func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String!{
-        if (section == 0){
-            return "Color of Rainbow"
-        }
-        if (section == 1){
-            return "GTA Series"
-        }
-        return ""
-    }
-    
-
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vw = UIView()
-        vw.backgroundColor = UIColor.red
-        let label = UILabel()
-        label.text = "Try"
-        label.bounds = CGRect(x: 0,y: 0,width:  100,height:  20)
-        label.textColor = UIColor.black
-        label.backgroundColor = UIColor.blue
-        vw.addSubview(label)
-        
-        return vw
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let iP = tableView.indexPath(for: sender as! UITableViewCell)!
-        if (segue.identifier == "blue") {
-            let dest = segue.destination as! NewController
-            dest.navigationItem.title = mas[iP.section][iP.row]
-        }
-    }
- 
+    */
 
     /*
     // Override to support conditional editing of the table view.

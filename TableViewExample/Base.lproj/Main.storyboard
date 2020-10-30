@@ -28,7 +28,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="jOK-pu-o5r" kind="show" id="bDe-D6-VZg"/>
+                                    <segue destination="jOK-pu-o5r" kind="show" identifier="blue" id="bDe-D6-VZg"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="77" id="XiM-GV-ubN">
@@ -40,7 +40,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="ypl-4X-0Km" kind="show" id="CXT-5E-86i"/>
+                                    <segue destination="ypl-4X-0Km" kind="show" identifier="orange" id="CXT-5E-86i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="1853" y="380"/>
         </scene>
-        <!--Table View Controller-->
+        <!--New Controller-->
         <scene sceneID="mMF-Fw-u11">
             <objects>
-                <tableViewController id="jOK-pu-o5r" sceneMemberID="viewController">
+                <tableViewController id="jOK-pu-o5r" customClass="NewController" customModule="TableViewExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="meZ-0w-uKk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
